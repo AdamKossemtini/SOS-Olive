@@ -92,11 +92,11 @@ class testData():
       
     def __len__ (self):
         return len(self.X_data)
-train_loader = DataLoader(dataset=train_data, batch_size=8, shuffle=True)
+train_loader = DataLoader(dataset=train_data, batch_size=6 shuffle=True)
 net.to(device)
 device=torch.device("cuda:0" if torch.cuda.is_available () else "cpu")
 test_data = testData(torch.FloatTensor(X_test))
-EPOCHS =116
+EPOCHS =20
 LEARNING_RATE = 0.001
 def binary_acc(y_pred, y_testt):
     y_pred_tag = torch.round(y_pred)
